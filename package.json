@@ -1,0 +1,19 @@
+{
+  "name": "babel-plugin-glamorous",
+  "version": "1.0.0",
+  "description": "add a displayName property to glamorous components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernard-lin/babel-plugin-glamorous.git"
+  },
+  "author": "Kent C. Dodds, Bernard Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bernard-lin/babel-plugin-glamorous/issues"
+  },
+  "homepage": "https://github.com/bernard-lin/babel-plugin-glamorous#readme"
+}
