@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-glamorous-displayname",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "add a displayName property to glamorous components",
   "keywords": [
     "babel",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bernard-lin/babel-plugin-glamorous.git"
+    "url": "git+https://github.com/bernard-lin/babel-plugin-glamorous-displayname.git"
   },
   "author": "Kent C. Dodds, Bernard Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bernard-lin/babel-plugin-glamorous/issues"
+    "url": "https://github.com/bernard-lin/babel-plugin-glamorous-displayname/issues"
   },
-  "homepage": "https://github.com/bernard-lin/babel-plugin-glamorous#readme",
+  "homepage": "https://github.com/bernard-lin/babel-plugin-glamorous-displayname#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0"
   },
