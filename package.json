@@ -2,7 +2,13 @@
   "name": "babel-plugin-glamorous",
   "version": "1.0.0",
   "description": "add a displayName property to glamorous components",
-  "main": "index.js",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "react",
+    "glamorous"
+  ],
+  "main": "src",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
