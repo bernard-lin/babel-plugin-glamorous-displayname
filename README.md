@@ -1,6 +1,6 @@
 # babel-plugin-glamorous-displayname
 
-Extended plugin sample for Babel.
+Nicer looking display names for Glamorous components! 
 
 ## Installation
 
