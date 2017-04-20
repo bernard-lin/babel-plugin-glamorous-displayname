@@ -1,8 +1,9 @@
-export default function (babel) {
-  const { types: t } = babel;
+export default function(babel) {
+  const {types: t} = babel
   const identifiers = new Set()
+  const declarators = new Set()
   return {
-    name: "babel-plugin-glamorous-displayName",
+    name: 'babel-plugin-glamorous-displayName',
     visitor: {
       ImportDeclaration(path) {
         const defaultSpecifierPath = path.get('specifiers')[0]
@@ -33,19 +34,36 @@ export default function (babel) {
         exit(path) {
           Array.from(identifiers).forEach(identifier => {
             const declarator = identifier.findParent(t.isVariableDeclarator)
+            if (!declarator || declarators.has(declarator)) {
+              return
+            }
+            declarators.add(declarator)
             const {node: {id: {name: displayName}}} = declarator
-            declarator.parentPath.insertAfter(t.expressionStatement(t.assignmentExpression('=', t.memberExpression(t.identifier(displayName), t.identifier('displayName')), t.stringLiteral(displayName))))
+            declarator.parentPath.insertAfter(
+              t.expressionStatement(
+                t.assignmentExpression(
+                  '=',
+                  t.memberExpression(
+                    t.identifier(displayName),
+                    t.identifier('displayName')
+                  ),
+                  t.stringLiteral(displayName)
+                )
+              )
+            )
           })
         }
       }
     }
-  };
-  
+  }
+
   function isRequireCall(callExpression) {
-    return callExpression &&
+    return (
+      callExpression &&
       callExpression.type === 'CallExpression' &&
       callExpression.callee.name === 'require' &&
       callExpression.arguments.length === 1 &&
       callExpression.arguments[0].value === 'glamorous'
+    )
   }
 }
