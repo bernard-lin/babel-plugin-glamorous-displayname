@@ -9,8 +9,8 @@ This plugin adds a displayName property to your Glamorous components for use wit
 ```js
 const MyStyledButton = glamorous.button();
 ```
-React Dev Tools:
-![Alt text](https://cloud.githubusercontent.com/assets/16327281/25269334/2617d1c4-264a-11e7-98aa-9b67c9c26ad6.png)
+
+![Alt text](https://cloud.githubusercontent.com/assets/16327281/25269334/2617d1c4-264a-11e7-98aa-9b67c9c26ad6.png "React DevTools:")
 
 **Out**
 
@@ -20,7 +20,7 @@ MyStyledButton.displayName = 'MyStyledButton'
 ```
 
 React Dev Tools:
-![Alt text](https://cloud.githubusercontent.com/assets/16327281/25269284/f4c4791a-2649-11e7-8457-f367ea8fab59.png)
+![Alt text](https://cloud.githubusercontent.com/assets/16327281/25269284/f4c4791a-2649-11e7-8457-f367ea8fab59.png "React DevTools:")
 
 ## Installation
 
