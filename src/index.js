@@ -25,10 +25,13 @@ export default function(babel) {
           return
         }
         const {id: {name}} = node
-        const {referencePaths} = path.scope.getBinding(name)
-        referencePaths.forEach(reference => {
-          identifiers.add(reference)
-        })
+        const binding = path.scope.getBinding(name)
+        if (binding) {
+          const {referencePaths} = binding
+          referencePaths.forEach(reference => {
+            identifiers.add(reference)
+          })
+        }
       },
       Program: {
         exit(path) {
