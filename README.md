@@ -2,8 +2,6 @@
 
 This plugin adds a displayName property to your Glamorous components for use with React DevTools. 
 
-[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/babel-plugin-glamorous-displayname)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](https://www.npmjs.com/package/babel-plugin-glamorous-displayname
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/bernard-lin/babel-plugin-glamorous-displayname/master/LICENSE)
 
