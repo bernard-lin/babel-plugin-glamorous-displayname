@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`4. babel-plugin-glamorous-displayName 1`] = `
+"
+import g from 'glamorous'
+const Button = g.button()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const Button = g.button();
+Button.displayName = 'Button';
+"
+`;
+
+exports[`5. babel-plugin-glamorous-displayName 1`] = `
+"
+const l = require('glamorous')
+const MyDiv = l.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const l = require('glamorous');
+const MyDiv = l.div();
+MyDiv.displayName = 'MyDiv';
+"
+`;
+
+exports[`6. babel-plugin-glamorous-displayName 1`] = `
+"
+import g from 'glamorous'
+export const MySection = g.section()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+export const MySection = g.section();
+MySection.displayName = 'MySection';
+"
+`;
