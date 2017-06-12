@@ -36,12 +36,17 @@ export default function(babel) {
       Program: {
         exit(path) {
           Array.from(identifiers).forEach(identifier => {
-            const declarator = identifier.findParent(t.isVariableDeclarator)
+            let declarator = identifier.findParent(t.isVariableDeclarator)
             if (!declarator || declarators.has(declarator)) {
               return
             }
             declarators.add(declarator)
             const {node: {id: {name: displayName}}} = declarator
+
+            if (declarator.parentPath.findParent(t.isExportNamedDeclaration)) {
+               declarator = declarator.parentPath
+            }
+
             declarator.parentPath.insertAfter(
               t.expressionStatement(
                 t.assignmentExpression(
