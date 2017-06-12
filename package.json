@@ -11,7 +11,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "prepublish": "npm t",
+    "prepublishOnly": "npm run test && npm run build",
     "test": "jest --coverage"
   },
   "repository": {
