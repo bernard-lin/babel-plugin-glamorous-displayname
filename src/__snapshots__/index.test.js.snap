@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`4. babel-plugin-glamorous-displayName 1`] = `
+exports[`4. adds a display name for a component with a variable name 1`] = `
 "
 import g from 'glamorous'
 const Button = g.button()
@@ -9,11 +9,11 @@ const Button = g.button()
 
 import g from 'glamorous';
 const Button = g.button();
-Button.displayName = 'Button';
+Button.displayName = 'SomeComponent__Button';
 "
 `;
 
-exports[`5. babel-plugin-glamorous-displayName 1`] = `
+exports[`5. works with requires 1`] = `
 "
 const l = require('glamorous')
 const MyDiv = l.div()
@@ -22,11 +22,11 @@ const MyDiv = l.div()
 
 const l = require('glamorous');
 const MyDiv = l.div();
-MyDiv.displayName = 'MyDiv';
+MyDiv.displayName = 'SomeComponent__MyDiv';
 "
 `;
 
-exports[`6. babel-plugin-glamorous-displayName 1`] = `
+exports[`6. works with exported components 1`] = `
 "
 import g from 'glamorous'
 export const MySection = g.section()
@@ -35,11 +35,11 @@ export const MySection = g.section()
 
 import g from 'glamorous';
 export const MySection = g.section();
-MySection.displayName = 'MySection';
+MySection.displayName = 'SomeComponent__MySection';
 "
 `;
 
-exports[`7. babel-plugin-glamorous-displayName 1`] = `
+exports[`7. does not fail when destructuring built-in components 1`] = `
 "
 import g from 'glamorous'
 const { Div } = g
@@ -48,5 +48,136 @@ const { Div } = g
 
 import g from 'glamorous';
 const { Div } = g;
+"
+`;
+
+exports[`8. inserts the displayName to the bottom of the closure 1`] = `
+"
+import g from 'glamorous'
+
+function foo() {
+  const MyDiv = g.div()
+  console.log(MyDiv)
+  return MyDiv
+  // foo
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+
+function foo() {
+  const MyDiv = g.div();
+  console.log(MyDiv);
+  MyDiv.displayName = 'SomeComponent__MyDiv';
+  return MyDiv;
+  // foo
+}
+"
+`;
+
+exports[`9. handles scope in try 1`] = `
+"
+import g from 'glamorous'
+
+function foo() {
+  try {
+    const MyDiv = g.div()
+    console.log(MyDiv)
+  } catch(e) {
+    // foo
+  }
+  return MyDiv
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+
+function foo() {
+  try {
+    const MyDiv = g.div();
+    console.log(MyDiv);
+    MyDiv.displayName = 'SomeComponent__MyDiv';
+  } catch (e) {
+    // foo
+  }
+  return MyDiv;
+}
+"
+`;
+
+exports[`10. handles try as the last function body item 1`] = `
+"
+import g from 'glamorous'
+
+function foo() {
+  const MyDiv = g.div()
+  try {
+    console.log(MyDiv)
+    return MyDiv
+  } catch(e) {
+    // foo
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+
+function foo() {
+  const MyDiv = g.div();
+  try {
+    console.log(MyDiv);
+    MyDiv.displayName = 'SomeComponent__MyDiv';
+    return MyDiv;
+  } catch (e) {
+    // foo
+  }
+}
+"
+`;
+
+exports[`11. handles finally 1`] = `
+"
+import g from 'glamorous'
+
+function foo() {
+  const MyDiv = g.div()
+  try {
+    console.log(MyDiv)
+    return MyDiv
+  } finally {
+    console.log('other thing')
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+
+function foo() {
+  const MyDiv = g.div();
+  try {
+    console.log(MyDiv);
+    return MyDiv;
+  } finally {
+    console.log('other thing');
+    MyDiv.displayName = 'SomeComponent__MyDiv';
+  }
+}
+"
+`;
+
+exports[`12. does not insert "unknown" as part of the displayName 1`] = `
+"
+import g from 'glamorous'
+const MySection = g.section()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MySection = g.section();
+MySection.displayName = 'MySection';
 "
 `;

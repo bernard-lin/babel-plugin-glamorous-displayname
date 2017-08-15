@@ -9,8 +9,11 @@
     "glamorous"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --ignore *.test.js,__snapshots__",
     "prepublishOnly": "npm run test && npm run build",
     "test": "jest --coverage"
   },
@@ -28,6 +31,7 @@
     "babel-runtime": "^6.23.0"
   },
   "devDependencies": {
+    "ast-pretty-print": "^2.0.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-plugin-tester": "^3.1.0",
