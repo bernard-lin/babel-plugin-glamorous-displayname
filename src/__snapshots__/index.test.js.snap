@@ -38,3 +38,15 @@ export const MySection = g.section();
 MySection.displayName = 'MySection';
 "
 `;
+
+exports[`7. babel-plugin-glamorous-displayName 1`] = `
+"
+import g from 'glamorous'
+const { Div } = g
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const { Div } = g;
+"
+`;
