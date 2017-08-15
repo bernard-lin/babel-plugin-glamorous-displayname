@@ -37,14 +37,18 @@ export default function(babel) {
         exit(path) {
           Array.from(identifiers).forEach(identifier => {
             let declarator = identifier.findParent(t.isVariableDeclarator)
-            if (!declarator || declarators.has(declarator)) {
+            if (
+              !declarator ||
+              declarators.has(declarator) ||
+              !t.isCallExpression(declarator.node.init)
+            ) {
               return
             }
             declarators.add(declarator)
             const {node: {id: {name: displayName}}} = declarator
 
             if (declarator.parentPath.findParent(t.isExportNamedDeclaration)) {
-               declarator = declarator.parentPath
+              declarator = declarator.parentPath
             }
 
             declarator.parentPath.insertAfter(

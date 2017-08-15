@@ -28,5 +28,9 @@ pluginTester({
       import g from 'glamorous'
       export const MySection = g.section()
     `,
+    `
+      import g from 'glamorous'
+      const { Div } = g
+    `,
   ],
 })
