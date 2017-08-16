@@ -109,10 +109,10 @@ MIT
 
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
-[build-badge]: https://img.shields.io/travis/kentcdodds/babel-plugin-glamorous-displayname.svg?style=flat-square
-[build]: https://travis-ci.org/kentcdodds/babel-plugin-glamorous-displayname
-[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/babel-plugin-glamorous-displayname.svg?style=flat-square
-[coverage]: https://codecov.io/github/kentcdodds/babel-plugin-glamorous-displayname
+[build-badge]: https://img.shields.io/travis/bernard-lin/babel-plugin-glamorous-displayname.svg?style=flat-square
+[build]: https://travis-ci.org/bernard-lin/babel-plugin-glamorous-displayname
+[coverage-badge]: https://img.shields.io/codecov/c/github/bernard-lin/babel-plugin-glamorous-displayname.svg?style=flat-square
+[coverage]: https://codecov.io/github/bernard-lin/babel-plugin-glamorous-displayname
 [version-badge]: https://img.shields.io/npm/v/babel-plugin-glamorous-displayname.svg?style=flat-square
 [package]: https://www.npmjs.com/package/babel-plugin-glamorous-displayname
 [downloads-badge]: https://img.shields.io/npm/dm/babel-plugin-glamorous-displayname.svg?style=flat-square
@@ -124,11 +124,11 @@ MIT
 [donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 [coc]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/blob/master/other/CODE_OF_CONDUCT.md
-[github-watch-badge]: https://img.shields.io/github/watchers/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[github-watch-badge]: https://img.shields.io/github/watchers/bernard-lin/babel-plugin-glamorous-displayname.svg?style=social
 [github-watch]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/watchers
-[github-star-badge]: https://img.shields.io/github/stars/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[github-star-badge]: https://img.shields.io/github/stars/bernard-lin/babel-plugin-glamorous-displayname.svg?style=social
 [github-star]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/stargazers
 [twitter]: https://twitter.com/intent/tweet?text=Check%20out%20babel-plugin-glamorous-displayname!%20https://github.com/bernard-lin/babel-plugin-glamorous-displayname%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/bernard-lin/babel-plugin-glamorous-displayname.svg?style=social
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
 [all-contributors]: https://github.com/kentcdodds/all-contributors
