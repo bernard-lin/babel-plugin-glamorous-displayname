@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/jest",
+    "kentcdodds/prettier"
+  ],
+  "rules": {
+    "max-len": "off",
+    "complexity": [2, 8],
+  }
+}

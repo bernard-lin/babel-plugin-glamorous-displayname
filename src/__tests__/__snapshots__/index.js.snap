@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds a display name for a component with a variable name 1`] = `
+"
+import g from 'glamorous'
+const Button = g.button()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const Button = g.button.withConfig({
+  displayName: 'SomeComponent__Button'
+})();
+"
+`;
+
+exports[`does not fail when destructuring built-in components 1`] = `
+"
+import g from 'glamorous'
+const { Div } = g
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const { Div } = g;
+"
+`;
+
+exports[`does not insert "unknown" as part of the displayName 1`] = `
+"
+import g from 'glamorous'
+const MyDiv = g.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MyDiv = g.div.withConfig({
+  displayName: 'MyDiv'
+})();
+"
+`;
+
+exports[`does not use the filename if it is the same as the component name 1`] = `
+"
+import g from 'glamorous'
+const MyDiv = g.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MyDiv = g.div.withConfig({
+  displayName: 'MyDiv'
+})();
+"
+`;
+
+exports[`handles custom components 1`] = `
+"
+import g from 'glamorous'
+const MyComp = g(MyThing, {rootEl: 'div'})()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MyComp = g(MyThing, { rootEl: 'div' }).withConfig({
+  displayName: 'SomeComponent__MyComp'
+})();
+"
+`;
+
+exports[`handles style args 1`] = `
+"
+import g from 'glamorous'
+const MySection = g.section({color: 'blue'}, () => ({}))
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MySection = g.section.withConfig({
+  displayName: 'SomeComponent__MySection'
+})({ color: 'blue' }, () => ({}));
+"
+`;
+
+exports[`if component name cannot be inferred, it uses the filename only 1`] = `
+"
+import g from 'glamorous'
+g.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+g.div.withConfig({
+  displayName: 'my-div'
+})();
+"
+`;
+
+exports[`uses the parent directory if the filename is "index" 1`] = `
+"
+import g from 'glamorous'
+const MyDiv = g.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+const MyDiv = g.div.withConfig({
+  displayName: 'component__MyDiv'
+})();
+"
+`;
+
+exports[`works in an object assignment 1`] = `
+"
+import glamorous from 'glamorous'
+const comps = {
+  Div: glamorous.div()
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import glamorous from 'glamorous';
+const comps = {
+  Div: glamorous.div.withConfig({
+    displayName: 'SomeComponent__Div'
+  })()
+};
+"
+`;
+
+exports[`works in member expressions 1`] = `
+"
+import glamorous from 'glamorous'
+const comps = {}
+comps.Div = glamorous.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import glamorous from 'glamorous';
+const comps = {};
+comps.Div = glamorous.div.withConfig({
+  displayName: 'SomeComponent'
+})();
+"
+`;
+
+exports[`works with exported components 1`] = `
+"
+import g from 'glamorous'
+export const MySection = g.section()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+export const MySection = g.section.withConfig({
+  displayName: 'SomeComponent__MySection'
+})();
+"
+`;
+
+exports[`works with requires 1`] = `
+"
+const l = require('glamorous')
+const MyDiv = l.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const l = require('glamorous');
+const MyDiv = l.div.withConfig({
+  displayName: 'SomeComponent__MyDiv'
+})();
+"
+`;

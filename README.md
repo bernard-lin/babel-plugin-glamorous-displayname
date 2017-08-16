@@ -1,13 +1,34 @@
-# babel-plugin-glamorous-displayname
+<div align="center">
+<h1>babel-plugin-glamorous-displayname</h1>
 
-This plugin adds a displayName property to your Glamorous components for use with React DevTools. 
+<p>add a displayName property to glamorous components</p>
+</div>
 
-[![npm](https://img.shields.io/npm/dt/babel-plugin-glamorous-displayname.svg)](https://www.npmjs.com/package/babel-plugin-glamorous-displayname)
-[![npm](https://img.shields.io/npm/v/babel-plugin-glamorous-displayname.svg)](https://www.npmjs.com/package/babel-plugin-glamorous-displayname)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/bernard-lin/babel-plugin-glamorous-displayname/master/LICENSE)
+<hr />
 
-## Example
+[![Build Status][build-badge]][build]
+[![Code Coverage][coverage-badge]][coverage]
+[![version][version-badge]][package]
+[![downloads][downloads-badge]][npmcharts]
+[![MIT License][license-badge]][LICENSE]
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![PRs Welcome][prs-badge]][prs]
+[![Code of Conduct][coc-badge]][coc]
+
+[![Watch on GitHub][github-watch-badge]][github-watch]
+[![Star on GitHub][github-star-badge]][github-star]
+[![Tweet][twitter-badge]][twitter]
+
+## The problem
+
+You want to use glamorous, but you want to have a better experience with the
+DevTools (because you lose the automatic `displayName` magic that the react
+babel preset gives you).
+
+## This solution
+
+Adds the `displayName` to glamorous components.
 
 **In**
 
@@ -20,17 +41,22 @@ const MyStyledButton = glamorous.button();
 **Out**
 
 ```js
-const MyStyledButton = glamorous.button();
-MyStyledButton.displayName = 'MyStyledButton'
+const MyStyledButton = glamorous.button.withConfig({
+  displayName: 'MyStyledButton'
+});
 ```
 
 ![Alt text](https://cloud.githubusercontent.com/assets/16327281/25269284/f4c4791a-2649-11e7-8457-f367ea8fab59.png "React DevTools")
 
 ## Installation
 
-```sh
-$ npm install babel-plugin-glamorous-displayname
+This module is distributed via [npm][npm] which is bundled with [node][node] and
+should be installed as one of your project's `devDependencies`:
+
 ```
+npm install --save-dev babel-plugin-glamorous-displayname
+```
+
 
 ## Usage
 
@@ -57,3 +83,52 @@ require('babel').transform('code', {
   plugins: ['glamorous-displayname']
 });
 ```
+
+## Inspiration
+
+- [styled-components](https://github.com/styled-components/babel-plugin-styled-components)
+
+## Other Solutions
+
+I'm not aware of any, if you are please [make a pull request][prs] and add it
+here!
+
+## Contributors
+
+Thanks goes to these people ([emoji key][emojis]):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors][all-contributors] specification.
+Contributions of any kind welcome!
+
+## LICENSE
+
+MIT
+
+[npm]: https://www.npmjs.com/
+[node]: https://nodejs.org
+[build-badge]: https://img.shields.io/travis/kentcdodds/babel-plugin-glamorous-displayname.svg?style=flat-square
+[build]: https://travis-ci.org/kentcdodds/babel-plugin-glamorous-displayname
+[coverage-badge]: https://img.shields.io/codecov/c/github/kentcdodds/babel-plugin-glamorous-displayname.svg?style=flat-square
+[coverage]: https://codecov.io/github/kentcdodds/babel-plugin-glamorous-displayname
+[version-badge]: https://img.shields.io/npm/v/babel-plugin-glamorous-displayname.svg?style=flat-square
+[package]: https://www.npmjs.com/package/babel-plugin-glamorous-displayname
+[downloads-badge]: https://img.shields.io/npm/dm/babel-plugin-glamorous-displayname.svg?style=flat-square
+[npmcharts]: http://npmcharts.com/compare/babel-plugin-glamorous-displayname
+[license-badge]: https://img.shields.io/npm/l/babel-plugin-glamorous-displayname.svg?style=flat-square
+[license]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/blob/master/LICENSE
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]: http://makeapullrequest.com
+[donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
+[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[coc]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/blob/master/other/CODE_OF_CONDUCT.md
+[github-watch-badge]: https://img.shields.io/github/watchers/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[github-watch]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/watchers
+[github-star-badge]: https://img.shields.io/github/stars/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[github-star]: https://github.com/bernard-lin/babel-plugin-glamorous-displayname/stargazers
+[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20babel-plugin-glamorous-displayname!%20https://github.com/bernard-lin/babel-plugin-glamorous-displayname%20%F0%9F%91%8D
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/kentcdodds/babel-plugin-glamorous-displayname.svg?style=social
+[emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
+[all-contributors]: https://github.com/kentcdodds/all-contributors

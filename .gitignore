@@ -1,7 +1,12 @@
-/node_modules/
-/dist
-*.log
+node_modules
 coverage
-yarn.lock
-package-lock.json
+dist
+.opt-in
+.opt-out
+.DS_Store
+.eslintcache
 
+# these cause more harm than good
+# when working with contributors
+package-lock.json
+yarn.lock
