@@ -12,7 +12,7 @@
 [![downloads][downloads-badge]][npmcharts]
 [![MIT License][license-badge]][LICENSE]
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 
@@ -98,6 +98,8 @@ here!
 Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars0.githubusercontent.com/u/16327281?v=4" width="100px;"/><br /><sub>Bernard Lin</sub>](https://github.com/bernard-lin)<br />[💻](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=bernard-lin "Code") [📖](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=bernard-lin "Documentation") [⚠️](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=bernard-lin "Tests") | [<img src="https://avatars0.githubusercontent.com/u/1500684?v=4" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />[🐛](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/issues?q=author%3Akentcdodds "Bug reports") [💻](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=kentcdodds "Code") [📖](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=kentcdodds "Documentation") [🤔](#ideas-kentcdodds "Ideas, Planning, & Feedback") [🚇](#infra-kentcdodds "Infrastructure (Hosting, Build-Tools, etc)") [📢](#talk-kentcdodds "Talks") [⚠️](https://github.com/bernard-lin/babel-plugin-glamorous-displayname/commits?author=kentcdodds "Tests") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
