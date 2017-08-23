@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-glamorous-displayname",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "add a displayName property to glamorous components",
   "main": "dist/index.js",
   "engines": {
@@ -10,7 +10,8 @@
   "scripts": {
     "start": "nps",
     "test": "nps test",
-    "precommit": "lint-staged && opt --in pre-commit --exec \"npm start validate\""
+    "precommit": "lint-staged && opt --in pre-commit --exec \"npm start validate\"",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "files": ["dist"],
   "keywords": ["babel", "babel-plugin", "react", "glamorous"],
@@ -39,7 +40,8 @@
     "nps": "^5.4.0",
     "nps-utils": "^1.2.0",
     "opt-cli": "^1.5.1",
-    "prettier-eslint-cli": "^4.1.1"
+    "prettier-eslint-cli": "^4.1.1",
+    "semantic-release": "^7.0.2"
   },
   "lint-staged": {
     "*.+(js|json)": ["prettier-eslint --write", "git add"]
