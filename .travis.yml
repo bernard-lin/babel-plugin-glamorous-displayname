@@ -13,7 +13,7 @@ after_success:
   - npx codecov
   # this is disabled for now because we need to get semantic-release working and it's not quite working right...
   # Try again later: `npx semantic-release-cli setup`
-  # - npm i -g semantic-release@7 && semantic-release pre && npm publish && semantic-release post
+  - npm i -g semantic-release@7 && semantic-release pre && npm publish && semantic-release post
 branches:
   only:
     - master
