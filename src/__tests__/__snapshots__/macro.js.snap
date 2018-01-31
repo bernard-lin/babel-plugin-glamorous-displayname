@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros different name: different name 1`] = `
+
+import g from '../macro'
+
+const MyComp = g.div()
+const MyOtherComp = g.span()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import g from 'glamorous';
+
+
+const MyComp = g.div.withConfig({
+  displayName: 'SomeComponent__MyComp'
+})();
+const MyOtherComp = g.span.withConfig({
+  displayName: 'SomeComponent__MyOtherComp'
+})();
+
+`;
+
+exports[`macros multiple usages: multiple usages 1`] = `
+
+import glamorous from '../macro'
+
+const MyComp = glamorous.div()
+const MyOtherComp = glamorous.span()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import glamorous from 'glamorous';
+
+
+const MyComp = glamorous.div.withConfig({
+  displayName: 'SomeComponent__MyComp'
+})();
+const MyOtherComp = glamorous.span.withConfig({
+  displayName: 'SomeComponent__MyOtherComp'
+})();
+
+`;
+
+exports[`macros simple use case: simple use case 1`] = `
+
+import glamorous from '../macro'
+
+const MyComp = glamorous.div()
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import glamorous from 'glamorous';
+
+
+const MyComp = glamorous.div.withConfig({
+  displayName: 'SomeComponent__MyComp'
+})();
+
+`;

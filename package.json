@@ -17,17 +17,27 @@
     "setup": "npm install && npm run validate -s",
     "precommit": "kcd-scripts precommit"
   },
-  "files": ["dist"],
-  "keywords": ["babel", "babel-plugin", "react", "glamorous"],
+  "files": ["dist", "macro.js"],
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "react",
+    "glamorous",
+    "babel-plugin-macros"
+  ],
   "author": "Kent C. Dodds, Bernard Lin",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-macros": "^2.1.0",
     "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
     "ast-pretty-print": "^2.0.0",
     "babel-plugin-tester": "^4.0.0",
     "kcd-scripts": "^0.32.2"
+  },
+  "eslintConfig": {
+    "extends": ["./node_modules/kcd-scripts/eslint.js"]
   },
   "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {
