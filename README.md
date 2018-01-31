@@ -59,6 +59,7 @@ const MyStyledButton = glamorous.button.withConfig({
   * [Via `.babelrc` (Recommended)](#via-babelrc-recommended)
   * [Via CLI](#via-cli)
   * [Via Node API](#via-node-api)
+* [Use with `babel-plugin-macros`](#use-with-babel-plugin-macros)
 * [Inspiration](#inspiration)
 * [Other Solutions](#other-solutions)
 * [Contributors](#contributors)
@@ -100,6 +101,22 @@ require('babel').transform('code', {
   plugins: ['glamorous-displayname'],
 })
 ```
+
+## Use with `babel-plugin-macros`
+
+Once you've [configured `babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md)
+you can import/require the `glamorous` macro at `babel-plugin-glamorous/macro`.
+For example:
+
+```javascript
+import glamorous from 'babel-plugin-glamorous/macro'
+
+const MyStyledInput = glamorous.input({
+  /* your styles */
+})
+```
+
+> You could also use [`glamorous.macro`][glamorous.macro] if you'd prefer to type less 😀
 
 ## Inspiration
 
@@ -154,3 +171,4 @@ MIT
 [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/bernard-lin/babel-plugin-glamorous-displayname.svg?style=social
 [emojis]: https://github.com/kentcdodds/all-contributors#emoji-key
 [all-contributors]: https://github.com/kentcdodds/all-contributors
+[glamorous.macro]: https://www.npmjs.com/package/glamorous.macro
