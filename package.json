@@ -8,10 +8,14 @@
     "npm": "> 3"
   },
   "scripts": {
-    "start": "nps",
-    "test": "nps test",
-    "precommit": "lint-staged && opt --in pre-commit --exec \"npm start validate\"",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "add-contributor": "kcd-scripts contributors add",
+    "build": "kcd-scripts build",
+    "lint": "kcd-scripts lint",
+    "test": "kcd-scripts test",
+    "test:update": "npm test -- --updateSnapshot",
+    "validate": "kcd-scripts validate",
+    "setup": "npm install && npm run validate -s",
+    "precommit": "kcd-scripts precommit"
   },
   "files": ["dist"],
   "keywords": ["babel", "babel-plugin", "react", "glamorous"],
@@ -21,37 +25,20 @@
     "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "^4.3.0",
     "ast-pretty-print": "^2.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^20.0.3",
     "babel-plugin-tester": "^4.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.24.1",
-    "eslint": "^4.2.0",
-    "eslint-config-kentcdodds": "^12.4.1",
-    "husky": "^0.14.3",
-    "jest": "^20.0.4",
-    "lint-staged": "^4.0.1",
-    "nps": "^5.4.0",
-    "nps-utils": "^1.2.0",
-    "opt-cli": "^1.5.1",
-    "prettier-eslint-cli": "^4.1.1",
-    "semantic-release": "^7.0.2"
+    "kcd-scripts": "^0.32.2"
   },
-  "lint-staged": {
-    "*.+(js|json)": ["prettier-eslint --write", "git add"]
-  },
+  "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bernard-lin/babel-plugin-glamorous-displayname.git"
+    "url":
+      "https://github.com/bernard-lin/babel-plugin-glamorous-displayname.git"
   },
   "bugs": {
-    "url": "https://github.com/bernard-lin/babel-plugin-glamorous-displayname/issues"
+    "url":
+      "https://github.com/bernard-lin/babel-plugin-glamorous-displayname/issues"
   },
-  "homepage": "https://github.com/bernard-lin/babel-plugin-glamorous-displayname#readme"
+  "homepage":
+    "https://github.com/bernard-lin/babel-plugin-glamorous-displayname#readme"
 }

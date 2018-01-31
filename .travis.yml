@@ -2,18 +2,12 @@ sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
+    - ~/.npm
 notifications:
   email: false
-node_js:
-  - '8'
-script:
-  - npm start validate
-after_success:
-  - npx codecov
-  # this is disabled for now because we need to get semantic-release working and it's not quite working right...
-  # Try again later: `npx semantic-release-cli setup`
-  - npm i -g semantic-release@7 && semantic-release pre && npm publish && semantic-release post
+node_js: '8'
+install: npm install
+script: npm run validate
+after_success: kcd-scripts travis-after-success
 branches:
-  only:
-    - master
+  only: master

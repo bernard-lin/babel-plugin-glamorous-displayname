@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`adds a display name for a component with a variable name 1`] = `
+exports[`babel-plugin-glamorous-displayName adds a display name for a component with a variable name: adds a display name for a component with a variable name 1`] = `
 "
 import g from 'glamorous'
 const Button = g.button()
@@ -14,7 +14,7 @@ const Button = g.button.withConfig({
 "
 `;
 
-exports[`does not fail when destructuring built-in components 1`] = `
+exports[`babel-plugin-glamorous-displayName does not fail when destructuring built-in components: does not fail when destructuring built-in components 1`] = `
 "
 import g from 'glamorous'
 const { Div } = g
@@ -26,7 +26,7 @@ const { Div } = g;
 "
 `;
 
-exports[`does not insert "unknown" as part of the displayName 1`] = `
+exports[`babel-plugin-glamorous-displayName does not insert "unknown" as part of the displayName: does not insert "unknown" as part of the displayName 1`] = `
 "
 import g from 'glamorous'
 const MyDiv = g.div()
@@ -40,7 +40,7 @@ const MyDiv = g.div.withConfig({
 "
 `;
 
-exports[`does not use the filename if it is the same as the component name 1`] = `
+exports[`babel-plugin-glamorous-displayName does not use the filename if it is the same as the component name: does not use the filename if it is the same as the component name 1`] = `
 "
 import g from 'glamorous'
 const MyDiv = g.div()
@@ -54,7 +54,7 @@ const MyDiv = g.div.withConfig({
 "
 `;
 
-exports[`handles custom components 1`] = `
+exports[`babel-plugin-glamorous-displayName handles custom components: handles custom components 1`] = `
 "
 import g from 'glamorous'
 const MyComp = g(MyThing, {rootEl: 'div'})()
@@ -68,7 +68,7 @@ const MyComp = g(MyThing, { rootEl: 'div' }).withConfig({
 "
 `;
 
-exports[`handles style args 1`] = `
+exports[`babel-plugin-glamorous-displayName handles style args: handles style args 1`] = `
 "
 import g from 'glamorous'
 const MySection = g.section({color: 'blue'}, () => ({}))
@@ -82,7 +82,7 @@ const MySection = g.section.withConfig({
 "
 `;
 
-exports[`if component name cannot be inferred, it uses the filename only 1`] = `
+exports[`babel-plugin-glamorous-displayName if component name cannot be inferred, it uses the filename only: if component name cannot be inferred, it uses the filename only 1`] = `
 "
 import g from 'glamorous'
 g.div()
@@ -96,7 +96,7 @@ g.div.withConfig({
 "
 `;
 
-exports[`uses the parent directory if the filename is "index" 1`] = `
+exports[`babel-plugin-glamorous-displayName uses the parent directory if the filename is "index": uses the parent directory if the filename is "index" 1`] = `
 "
 import g from 'glamorous'
 const MyDiv = g.div()
@@ -110,7 +110,7 @@ const MyDiv = g.div.withConfig({
 "
 `;
 
-exports[`works in an object assignment 1`] = `
+exports[`babel-plugin-glamorous-displayName works in an object assignment: works in an object assignment 1`] = `
 "
 import glamorous from 'glamorous'
 const comps = {
@@ -128,7 +128,7 @@ const comps = {
 "
 `;
 
-exports[`works in member expressions 1`] = `
+exports[`babel-plugin-glamorous-displayName works in member expressions: works in member expressions 1`] = `
 "
 import glamorous from 'glamorous'
 const comps = {}
@@ -144,7 +144,7 @@ comps.Div = glamorous.div.withConfig({
 "
 `;
 
-exports[`works with exported components 1`] = `
+exports[`babel-plugin-glamorous-displayName works with exported components: works with exported components 1`] = `
 "
 import g from 'glamorous'
 export const MySection = g.section()
@@ -158,7 +158,7 @@ export const MySection = g.section.withConfig({
 "
 `;
 
-exports[`works with requires 1`] = `
+exports[`babel-plugin-glamorous-displayName works with requires: works with requires 1`] = `
 "
 const l = require('glamorous')
 const MyDiv = l.div()

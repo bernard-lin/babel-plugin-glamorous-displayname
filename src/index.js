@@ -147,9 +147,9 @@ function getFileName(file) {
   if (!file || file.opts.filename === 'unknown') {
     return ''
   }
-  return file.opts.basename === 'index' ?
-    nodePath.basename(nodePath.dirname(file.opts.filename)) :
-    file.opts.basename
+  return file.opts.basename === 'index'
+    ? nodePath.basename(nodePath.dirname(file.opts.filename))
+    : file.opts.basename
 }
 
 function isRequireCall(callExpression) {
@@ -180,5 +180,5 @@ function looksLike(a, b) {
 
 function isPrimitive(val) {
   // eslint-disable-next-line
-  return val == null || /^[sbn]/.test(typeof val);
+  return val == null || /^[sbn]/.test(typeof val)
 }
