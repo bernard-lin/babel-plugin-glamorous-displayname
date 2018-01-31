@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-glamorous-displayname",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-released",
   "description": "add a displayName property to glamorous components",
   "main": "dist/index.js",
   "engines": {
