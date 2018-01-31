@@ -109,7 +109,7 @@ you can import/require the `glamorous` macro at `babel-plugin-glamorous/macro`.
 For example:
 
 ```javascript
-import glamorous from 'babel-plugin-glamorous/macro'
+import glamorous from 'babel-plugin-glamorous-displayname/macro'
 
 const MyStyledInput = glamorous.input({
   /* your styles */
